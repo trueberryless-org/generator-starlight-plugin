@@ -1,23 +1,33 @@
-'use strict';
-const Generator = require('yeoman-generator');
-const chalk = require('chalk');
-const yosay = require('yosay');
+"use strict";
+const Generator = require("yeoman-generator");
+const yosay = require("yosay");
 
 module.exports = class extends Generator {
-  prompting() {
-    // Have Yeoman greet the user.
+  initializing() {
     this.log(
-      yosay(
-        `Welcome to the smashing ${chalk.red('@trueberryless-org/generator-ci')} generator!`
-      )
+      yosay(`Welcome to the @trueberryless-org/generator-ci generator!`)
     );
+  }
 
+  prompting() {
     const prompts = [
       {
-        type: 'confirm',
-        name: 'someAnswer',
-        message: 'Would you like to enable this option?',
-        default: true
+        type: "input",
+        name: "repository-name",
+        message: "What is the name of the repository?",
+        default: this.appname
+      },
+      {
+        type: "input",
+        name: "github-owner",
+        message: "What is your GitHub username or organization?",
+        default: "trueberryless-org"
+      },
+      {
+        type: "input",
+        name: "docker-owner",
+        message: "What is your Docker username or organization?",
+        default: "trueberryless"
       }
     ];
 
@@ -28,13 +38,22 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    this.fs.copy(
-      this.templatePath('dummyfile.txt'),
-      this.destinationPath('dummyfile.txt')
+    this.fs.copyTpl(
+      this.templatePath("LICENSE"),
+      this.destinationPath("LICENSE"),
+      {
+        year: new Date().getFullYear(),
+        githubOwner: this.props.githubOwner
+      }
     );
   }
 
   install() {
+    this.env.options.nodePackageManager = "pnpm";
     this.installDependencies();
+  }
+
+  end() {
+    this.log("Done!");
   }
 };
