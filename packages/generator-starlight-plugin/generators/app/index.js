@@ -48,7 +48,7 @@ export default class StarlightPluginGenerator extends Generator {
       {
         type: "input",
         name: "description",
-        message: "What is your Starlight plugin for?"
+        message: "What is the description of your Starlight plugin?"
       },
       {
         type: "input",
@@ -72,41 +72,41 @@ export default class StarlightPluginGenerator extends Generator {
       }
     );
 
-    {
-      this.fs.copyTpl(
-        this.templatePath(".changeset/config.json"),
-        this.destinationPath(".changeset/config.json"),
-        {
-          githubOwner: this.props.githubOwner,
-          repositoryName: this.props.repositoryName
-        }
-      );
-      this.fs.copy(
-        this.templatePath(".changeset/README.md"),
-        this.destinationPath(".changeset/README.md")
-      );
-    }
+    this.fs.copyTpl(
+      this.templatePath(".changeset/config.json"),
+      this.destinationPath(".changeset/config.json"),
+      {
+        githubOwner: this.props.githubOwner,
+        repositoryName: this.props.repositoryName
+      }
+    );
+    this.fs.copy(
+      this.templatePath(".changeset/README.md"),
+      this.destinationPath(".changeset/README.md")
+    );
 
-    {
-      this.fs.copyTpl(
-        this.templatePath(".github/workflows"),
-        this.destinationPath(".github/workflows"),
-        {
-          defaultBranch: this.props.defaultBranch,
-          dockerRegistry: this.props.dockerRegistry,
-          dockerOwner: this.props.dockerOwner,
-          repositoryName: this.props.repositoryName,
-          githubOwner: this.props.githubOwner,
-          documentationFolder: this.props.documentationFolder
-        }
-      );
-    }
+    this.fs.copyTpl(
+      this.templatePath(".github/workflows"),
+      this.destinationPath(".github/workflows"),
+      {
+        defaultBranch: this.props.defaultBranch,
+        dockerRegistry: this.props.dockerRegistry,
+        dockerOwner: this.props.dockerOwner,
+        repositoryName: this.props.repositoryName,
+        githubOwner: this.props.githubOwner,
+        documentationFolder: this.props.documentationFolder
+      }
+    );
 
     {
       const pkgPath = this.destinationPath("package.json");
 
       if (!this.fs.exists(pkgPath)) {
-        this.fs.copy(this.templatePath("package.json"), pkgPath);
+        this.fs.copyTpl(this.templatePath("package.json"), pkgPath, {
+          repositoryName: this.props.repositoryName,
+          githubOwner: this.props.githubOwner,
+          description: this.props.description
+        });
       }
 
       const pkg = this.fs.readJSON(pkgPath, {});
@@ -161,4 +161,4 @@ export default class StarlightPluginGenerator extends Generator {
   end() {
     this.log("Done!");
   }
-};
+}
