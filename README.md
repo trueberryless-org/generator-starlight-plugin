@@ -1,6 +1,6 @@
 # @trueberryless-org/generator-starlight-plugin
 
-> Yeoman generator for continuous integration files for trueberryless-org
+> Opinionated Yeoman generator for Starlight Plugins
 
 ## Usage
 
