@@ -3,7 +3,7 @@ const Generator = require("yeoman-generator");
 const yosay = require("yosay");
 import camelCase from "camelcase";
 
-module.exports = class extends Generator {
+export default class StarlightPluginGenerator extends Generator {
   initializing() {
     this.log(
       yosay(
