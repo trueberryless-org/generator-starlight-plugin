@@ -1,5 +1,11 @@
 # @trueberryless-org/generator-starlight-plugin
 
+## 0.1.10
+
+### Patch Changes
+
+- [`bcbe1bf`](https://github.com/trueberryless-org/generator-starlight-plugin/commit/bcbe1bf0299381999f5f1d6061f201bc1d823e1c) Thanks [@trueberryless](https://github.com/trueberryless)! - Add async
+
 ## 0.1.9
 
 ### Patch Changes
