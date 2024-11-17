@@ -1,6 +1,6 @@
 "use strict";
-const Generator = require("yeoman-generator");
-const yosay = require("yosay");
+import Generator from "yeoman-generator";
+import yosay from "yosay";
 import camelCase from "camelcase";
 
 export default class StarlightPluginGenerator extends Generator {
