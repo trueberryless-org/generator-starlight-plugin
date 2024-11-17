@@ -13,9 +13,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    <%- dep("@astrojs/starlight") %>,
-    <%- dep("astro") %>,
-    <%- dep("sharp") %>,
+    <%- await dep("@astrojs/starlight") %>,
+    <%- await dep("astro") %>,
+    <%- await dep("sharp") %>,
     "<%= repositoryName %>": "workspace:*"
   },
   "engines": {

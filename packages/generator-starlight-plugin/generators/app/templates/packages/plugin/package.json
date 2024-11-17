@@ -9,11 +9,11 @@
     ".": "./index.ts"
   },
   "devDependencies": {
-    <%- dep("@astrojs/starlight") %>,
-    <%- dep("astro") %>
+    <%- await dep("@astrojs/starlight") %>,
+    <%- await dep("astro") %>
   },
   "peerDependencies": {
-    <%- peerDep("@astrojs/starlight") %>
+    <%- await peerDep("@astrojs/starlight") %>
   },
   "engines": {
     "node": "^18.17.1 || ^20.3.0 || >=21.0.0"

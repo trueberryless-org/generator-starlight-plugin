@@ -176,7 +176,11 @@ export default class StarlightPluginGenerator extends Generator {
 
   install() {
     this.env.options.nodePackageManager = "pnpm";
-    // this.installDependencies();
+    this.installDependencies({
+      npm: false,
+      bower: false,
+      pnpm: true
+    });
   }
 
   end() {
