@@ -1,6 +1,6 @@
 {
   "name": "@trueberryless-org/generator-starlight-plugin",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "Yeoman generator for continuous integration files for trueberryless-org",
   "type": "module",
   "homepage": "https://generator-starlight-plugin.trueberryless.org",
