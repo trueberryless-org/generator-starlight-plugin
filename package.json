@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "license": "MIT",
   "description": "Opinionated Yeoman generator for Starlight Plugins",
-  "scripts": {},
+  "scripts": {
+    "version": "pnpm changeset version && pnpm i --no-frozen-lockfile"
+  },
   "author": "trueberryless-org",
   "type": "module",
   "engines": {
