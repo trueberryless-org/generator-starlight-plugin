@@ -1,5 +1,11 @@
 # @trueberryless-org/generator-starlight-plugin
 
+## 0.1.5
+
+### Patch Changes
+
+- [`cd9ae73`](https://github.com/trueberryless-org/generator-starlight-plugin/commit/cd9ae73744e36c58028c894ecb288482deb04db5) Thanks [@trueberryless](https://github.com/trueberryless)! - Fix typo?
+
 ## 0.1.4
 
 ### Patch Changes
