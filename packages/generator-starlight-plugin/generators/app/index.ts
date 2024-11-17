@@ -4,6 +4,12 @@ import yosay from "yosay";
 import camelCase from "camelcase";
 import latestVersion from "latest-version";
 
+import {
+  fetchDependencyVersions,
+  getLatestMinorVersion,
+  getLatestVersion
+} from "./lib/npm.js";
+
 export default class StarlightPluginGenerator extends Generator {
   initializing() {
     this.log(
@@ -63,7 +69,12 @@ export default class StarlightPluginGenerator extends Generator {
     });
   }
 
-  async writing() {
+  async configuring() {
+    this.log.info("Preparing dependencies…");
+    await fetchDependencyVersions();
+  }
+
+  writing() {
     this.fs.copyTpl(
       this.templatePath("LICENSE"),
       this.destinationPath("LICENSE"),
@@ -132,14 +143,11 @@ export default class StarlightPluginGenerator extends Generator {
           documentationFolder: this.props.documentationFolder,
           importName: camelCase(this.props.repositoryName),
           description: this.props.description,
-          async dep(pkg) {
-            return `"${pkg}": "^${await latestVersion(pkg)}"`;
+          dep(pkg: string) {
+            return `"${pkg}": "^${getLatestVersion(pkg)}"`;
           },
-          async peerDep(pkg) {
-            return `"${pkg}": ">=${(await latestVersion(pkg))
-              .split(".")
-              .slice(0, 2)
-              .join(".")}"`;
+          peerDep(pkg: string) {
+            return `"${pkg}": ">=${getLatestMinorVersion(pkg)}"`;
           }
         }
       );
@@ -157,14 +165,11 @@ export default class StarlightPluginGenerator extends Generator {
             githubOwner: this.props.githubOwner,
             importName: camelCase(this.props.repositoryName),
             description: this.props.description,
-            async dep(pkg) {
-              return `"${pkg}": "^${await latestVersion(pkg)}"`;
+            dep(pkg: string) {
+              return `"${pkg}": "^${getLatestVersion(pkg)}"`;
             },
-            async peerDep(pkg) {
-              return `"${pkg}": ">=${(await latestVersion(pkg))
-                .split(".")
-                .slice(0, 2)
-                .join(".")}"`;
+            peerDep(pkg: string) {
+              return `"${pkg}": ">=${getLatestMinorVersion(pkg)}"`;
             }
           }
         );
