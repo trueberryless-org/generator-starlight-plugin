@@ -1,5 +1,11 @@
 # @trueberryless-org/generator-starlight-plugin
 
+## 0.1.2
+
+### Patch Changes
+
+- [`13c6199`](https://github.com/trueberryless-org/generator-starlight-plugin/commit/13c619908d9e952c65ddff41c70e4a3ca7a0afbf) Thanks [@trueberryless](https://github.com/trueberryless)! - Make package ES module
+
 ## 0.1.1
 
 ### Patch Changes
