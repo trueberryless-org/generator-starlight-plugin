@@ -1,0 +1,24 @@
+{
+  "name": "<%= repositoryName %>-monorepo",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "<%= repositoryDescription %>",
+  "scripts": {},
+  "author": "<%= githubOwner %>",
+  "type": "module",
+  "engines": {
+    "node": "^18.17.1 || ^20.3.0 || >=21.0.0"
+  },
+  "packageManager": "pnpm@9.6.0",
+  "private": true,
+  "homepage": "https://github.com/<%= githubOwner %>/<%= repositoryName %>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/<%= githubOwner %>/<%= repositoryName %>.git"
+  },
+  "bugs": "https://github.com/<%= githubOwner %>/<%= repositoryName %>/issues",
+  "devDependencies": {
+    "@changesets/changelog-github": "^0.5.0",
+    "@changesets/cli": "^2.27.9"
+  }
+}
