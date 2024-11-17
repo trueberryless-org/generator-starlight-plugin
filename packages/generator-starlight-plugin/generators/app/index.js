@@ -3,7 +3,7 @@ import Generator from "yeoman-generator";
 import yosay from "yosay";
 import camelCase from "camelcase";
 
-import { getLatestMinorVersion, getLatestVersion } from "./lib/npm";
+import { getLatestMinorVersion, getLatestVersion } from "./lib/npm.js";
 
 export default class StarlightPluginGenerator extends Generator {
   initializing() {
