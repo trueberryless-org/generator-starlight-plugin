@@ -1,5 +1,11 @@
 # @trueberryless-org/generator-starlight-plugin
 
+## 0.1.7
+
+### Patch Changes
+
+- [`4110407`](https://github.com/trueberryless-org/generator-starlight-plugin/commit/4110407cb96b2ce8d866f43e2bb34951126a66a1) Thanks [@trueberryless](https://github.com/trueberryless)! - Add dynamic content to docs folder
+
 ## 0.1.6
 
 ### Patch Changes
