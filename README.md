@@ -9,7 +9,7 @@ Create a new directory or use an existing one. All files will be generated relat
 Run the yeoman generator:
 
 ```bash
-npx -p yo -p @trueberryless-org/generator-starlight-plugin -- yo @trueberryless-org/ci
+npx -p yo -p @trueberryless-org/generator-starlight-plugin -- yo @trueberryless-org/starlight-plugin
 ```
 
 ## License
