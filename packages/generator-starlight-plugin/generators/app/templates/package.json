@@ -2,7 +2,7 @@
   "name": "<%= repositoryName %>-monorepo",
   "version": "0.1.0",
   "license": "MIT",
-  "description": "<%= repositoryDescription %>",
+  "description": "<%= description %>",
   "scripts": {},
   "author": "<%= githubOwner %>",
   "type": "module",

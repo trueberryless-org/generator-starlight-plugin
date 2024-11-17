@@ -89,39 +89,15 @@ module.exports = class extends Generator {
 
     {
       this.fs.copyTpl(
-        this.templatePath(".github/workflows/welcome-bot.yaml"),
-        this.destinationPath(".github/workflows/welcome-bot.yaml"),
-        {
-          defaultBranch: this.props.defaultBranch
-        }
-      );
-      this.fs.copyTpl(
-        this.templatePath(".github/workflows/release.yaml"),
-        this.destinationPath(".github/workflows/release.yaml"),
-        {
-          defaultBranch: this.props.defaultBranch,
-          githubOwner: this.props.githubOwner
-        }
-      );
-      this.fs.copyTpl(
-        this.templatePath(".github/workflows/deployment.yaml"),
-        this.destinationPath(".github/workflows/deployment.yaml"),
+        this.templatePath(".github/workflows"),
+        this.destinationPath(".github/workflows"),
         {
           defaultBranch: this.props.defaultBranch,
           dockerRegistry: this.props.dockerRegistry,
           dockerOwner: this.props.dockerOwner,
           repositoryName: this.props.repositoryName,
+          githubOwner: this.props.githubOwner,
           documentationFolder: this.props.documentationFolder
-        }
-      );
-      this.fs.copyTpl(
-        this.templatePath(".github/workflows/publish.yaml"),
-        this.destinationPath(".github/workflows/publish.yaml"),
-        {
-          defaultBranch: this.props.defaultBranch,
-          dockerRegistry: this.props.dockerRegistry,
-          dockerOwner: this.props.dockerOwner,
-          repositoryName: this.props.repositoryName
         }
       );
     }
@@ -173,6 +149,8 @@ module.exports = class extends Generator {
         );
       }
     }
+
+    this.fs.copy(this.templatePath(".vscode"), this.destinationPath(".vscode"));
   }
 
   install() {

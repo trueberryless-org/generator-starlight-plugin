@@ -4,11 +4,11 @@
 
 ## Package
 
-If you are looking for the Starlight plugin package, you can find it in the [`packages/<%= name %>/`](/packages/<%= name %>/) directory.
+If you are looking for the Starlight plugin package, you can find it in the [`packages/<%= repositoryName %>/`](/packages/<%= repositoryName %>/) directory.
 
 ## Project structure
 
-This project uses pnpm workspaces to develop a single Starlight plugin from the `packages/<%= name %>/` directory. A Starlight documentation site is also available in the `<%= documentationFolder %>/` directory that is also used for testing and demonstrating the Starlight plugin.
+This project uses pnpm workspaces to develop a single Starlight plugin from the `packages/<%= repositoryName %>/` directory. A Starlight documentation site is also available in the `<%= documentationFolder %>/` directory that is also used for testing and demonstrating the Starlight plugin.
 
 ## License
 
