@@ -155,7 +155,17 @@ export default class StarlightPluginGenerator extends Generator {
           {
             repositoryName: this.props.repositoryName,
             githubOwner: this.props.githubOwner,
-            importName: camelCase(this.props.repositoryName)
+            importName: camelCase(this.props.repositoryName),
+            description: this.props.description,
+            async dep(pkg) {
+              return `"${pkg}": "^${await latestVersion(pkg)}"`;
+            },
+            async peerDep(pkg) {
+              return `"${pkg}": ">=${(await latestVersion(pkg))
+                .split(".")
+                .slice(0, 2)
+                .join(".")}"`;
+            }
           }
         );
       }
