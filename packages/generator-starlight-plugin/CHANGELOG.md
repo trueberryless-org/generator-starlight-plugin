@@ -1,5 +1,11 @@
 # @trueberryless-org/generator-starlight-plugin
 
+## 0.1.11
+
+### Patch Changes
+
+- [`d98e1df`](https://github.com/trueberryless-org/generator-starlight-plugin/commit/d98e1df60648b6289ada1e9730dd3b3269b1621a) Thanks [@trueberryless](https://github.com/trueberryless)! - Try dep with ts files
+
 ## 0.1.10
 
 ### Patch Changes
