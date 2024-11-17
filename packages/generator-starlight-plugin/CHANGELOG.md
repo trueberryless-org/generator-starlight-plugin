@@ -1,5 +1,11 @@
 # @trueberryless-org/generator-starlight-plugin
 
+## 0.1.12
+
+### Patch Changes
+
+- [`08c75b1`](https://github.com/trueberryless-org/generator-starlight-plugin/commit/08c75b18ac07ca81f268c4103dcd7e86c50ff344) Thanks [@trueberryless](https://github.com/trueberryless)! - Migrating to TypeScript
+
 ## 0.1.11
 
 ### Patch Changes
