@@ -2,8 +2,7 @@
 import Generator from "yeoman-generator";
 import yosay from "yosay";
 import camelCase from "camelcase";
-
-import { getLatestMinorVersion, getLatestVersion } from "./lib/npm.js";
+import latestVersion from "latest-version";
 
 export default class StarlightPluginGenerator extends Generator {
   initializing() {
@@ -133,11 +132,14 @@ export default class StarlightPluginGenerator extends Generator {
           documentationFolder: this.props.documentationFolder,
           importName: camelCase(this.props.repositoryName),
           description: this.props.description,
-          dep(pkg) {
-            return `"${pkg}": "^${getLatestVersion(pkg)}"`;
+          async dep(pkg) {
+            return `"${pkg}": "^${await latestVersion(pkg)}"`;
           },
-          peerDep(pkg) {
-            return `"${pkg}": ">=${getLatestMinorVersion(pkg)}"`;
+          async peerDep(pkg) {
+            return `"${pkg}": ">=${(await latestVersion(pkg))
+              .split(".")
+              .slice(0, 2)
+              .join(".")}"`;
           }
         }
       );
