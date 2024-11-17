@@ -63,7 +63,7 @@ export default class StarlightPluginGenerator extends Generator {
     });
   }
 
-  writing() {
+  async writing() {
     this.fs.copyTpl(
       this.templatePath("LICENSE"),
       this.destinationPath("LICENSE"),
