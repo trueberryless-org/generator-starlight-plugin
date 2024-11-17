@@ -1,5 +1,11 @@
 # @trueberryless-org/generator-starlight-plugin
 
+## 0.1.6
+
+### Patch Changes
+
+- [`7cd4c8f`](https://github.com/trueberryless-org/generator-starlight-plugin/commit/7cd4c8f8d5a436fcd885cbed553ffe73a1763e75) Thanks [@trueberryless](https://github.com/trueberryless)! - Delete lib and make code in place
+
 ## 0.1.5
 
 ### Patch Changes
