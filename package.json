@@ -1,6 +1,6 @@
 {
-  "name": "generator-starlight-plugin-monorepo",
-  "version": "0.1.0",
+  "name": "@trueberryless-org/generator-starlight-plugin-monorepo",
+  "version": "1.0.0",
   "license": "MIT",
   "description": "Opinionated Yeoman generator for Starlight Plugins",
   "scripts": {
