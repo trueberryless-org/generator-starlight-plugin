@@ -1,5 +1,11 @@
 # @trueberryless-org/generator-starlight-plugin
 
+## 0.1.4
+
+### Patch Changes
+
+- [`69d63a1`](https://github.com/trueberryless-org/generator-starlight-plugin/commit/69d63a187a1b7425c24bf5adabd47d2a342e1dc6) Thanks [@trueberryless](https://github.com/trueberryless)! - Add latest version dynamic
+
 ## 0.1.3
 
 ### Patch Changes
