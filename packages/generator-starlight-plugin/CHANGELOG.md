@@ -1,5 +1,11 @@
 # @trueberryless-org/generator-starlight-plugin
 
+## 0.1.9
+
+### Patch Changes
+
+- [`7a28be5`](https://github.com/trueberryless-org/generator-starlight-plugin/commit/7a28be58ce8c7a417caa6d7b2dcbf7b8eb280c0b) Thanks [@trueberryless](https://github.com/trueberryless)! - Change dependency installation and dep function calls
+
 ## 0.1.8
 
 ### Patch Changes
