@@ -1,5 +1,11 @@
 # @trueberryless-org/generator-starlight-plugin
 
+## 0.1.13
+
+### Patch Changes
+
+- [`380234b`](https://github.com/trueberryless-org/generator-starlight-plugin/commit/380234b500696715964414a93b6c8b823c66e1b6) Thanks [@trueberryless](https://github.com/trueberryless)! - Rework package.json
+
 ## 0.1.12
 
 ### Patch Changes
