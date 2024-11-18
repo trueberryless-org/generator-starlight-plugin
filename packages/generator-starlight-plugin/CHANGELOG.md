@@ -1,5 +1,11 @@
 # @trueberryless-org/generator-starlight-plugin
 
+## 0.1.15
+
+### Patch Changes
+
+- [`5e1815f`](https://github.com/trueberryless-org/generator-starlight-plugin/commit/5e1815f7de0c043ce505b4dd518a326b4ddadcdd) Thanks [@trueberryless](https://github.com/trueberryless)! - Remove type: module
+
 ## 0.1.14
 
 ### Patch Changes
