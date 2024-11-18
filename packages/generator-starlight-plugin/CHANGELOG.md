@@ -1,5 +1,11 @@
 # @trueberryless-org/generator-starlight-plugin
 
+## 0.1.14
+
+### Patch Changes
+
+- [`7e972e6`](https://github.com/trueberryless-org/generator-starlight-plugin/commit/7e972e65b41d259879b430bd5a7e82a244405299) Thanks [@trueberryless](https://github.com/trueberryless)! - Try editing tsconfig.json
+
 ## 0.1.13
 
 ### Patch Changes
