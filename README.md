@@ -1,3 +1,5 @@
+> DISCLAIMER: Doesn't work, not working on the project currently...
+
 # @trueberryless-org/generator-starlight-plugin
 
 > Opinionated Yeoman generator for Starlight Plugins
